@@ -1,0 +1,21 @@
+version: "3.9"
+services:  
+  worker:
+    image: mostafahishamashmawi11/worker-node:latest
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres:9.4
+  redis:
+    image: redis
+  result:
+    image: mostafahishamashmawi11/result-app:latest
+    ports:
+    - 4000:80
+    
+  voting:
+    image: mostafahishamashmawi11/voting-web:latest
+    ports:
+    - 5000:80
+  
