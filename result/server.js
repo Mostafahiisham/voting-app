@@ -69,7 +69,7 @@ app.use(express.urlencoded());
 app.use(express.static(__dirname + '/views'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.resolve(__dirname + '/views/index.html'));
+  res.sendFile(path.resolve(__dirname ));
 });
 
 server.listen(port, function () {
